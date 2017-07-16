@@ -15,7 +15,6 @@
 		541629C41F197EE900A31E0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 541629C21F197EE900A31E0C /* LaunchScreen.storyboard */; };
 		5491B3C51F1ABC7F00F1F861 /* taskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491B3C41F1ABC7F00F1F861 /* taskCell.swift */; };
 		5491B3CA1F1ACE2100F1F861 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491B3C91F1ACE2100F1F861 /* AddTaskViewController.swift */; };
-		5491B3CC1F1B113900F1F861 /* AddTodoTaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491B3CB1F1B113900F1F861 /* AddTodoTaskDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		541629C51F197EE900A31E0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5491B3C41F1ABC7F00F1F861 /* taskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = taskCell.swift; sourceTree = "<group>"; };
 		5491B3C91F1ACE2100F1F861 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
-		5491B3CB1F1B113900F1F861 /* AddTodoTaskDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTodoTaskDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +65,6 @@
 				5491B3C41F1ABC7F00F1F861 /* taskCell.swift */,
 				541629BA1F197EE900A31E0C /* Main.storyboard */,
 				5491B3C91F1ACE2100F1F861 /* AddTaskViewController.swift */,
-				5491B3CB1F1B113900F1F861 /* AddTodoTaskDelegate.swift */,
 				541629C01F197EE900A31E0C /* Assets.xcassets */,
 				541629C21F197EE900A31E0C /* LaunchScreen.storyboard */,
 				541629C51F197EE900A31E0C /* Info.plist */,
@@ -154,7 +151,6 @@
 				541629B91F197EE900A31E0C /* ViewController.swift in Sources */,
 				541629BF1F197EE900A31E0C /* ToDoList.xcdatamodeld in Sources */,
 				541629B71F197EE900A31E0C /* AppDelegate.swift in Sources */,
-				5491B3CC1F1B113900F1F861 /* AddTodoTaskDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,7 +13,8 @@ class TaskCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var detailsLabel: UILabel!
+    @IBOutlet weak var notesLabel: UILabel!
+    
     
     
 }

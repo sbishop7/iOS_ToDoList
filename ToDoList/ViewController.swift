@@ -11,9 +11,22 @@ import CoreData
 
 class ViewController: UIViewController {
 
-    var tasks = ["Hello", "World"]
+    var tasks = [Task]()
     
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//    let todoTask = NSEntityDescription.insertNewObject(forEntityName: "Task", into: managedObjectContext) as! ToDoTask
+    
+    func fetchAllToDoTasks() {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Task")
+        do{
+            let result = try managedObjectContext.fetch(request)
+            tasks = result as! [Task]
+        } catch {
+            print("\(error)")
+        }
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +39,7 @@ class ViewController: UIViewController {
     }
 
 
+    
 }
 
 extension ViewController: UITableViewDataSource {
@@ -37,7 +51,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath)
         let task = tasks[indexPath.row]
-        cell.detailTextLabel?.text = task
+        cell.detailTextLabel?.text = task.title
         
         return cell
     }

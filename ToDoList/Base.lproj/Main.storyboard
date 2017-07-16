@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LJB-wN-nZ2">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="90" id="EAp-sR-rBg" customClass="TaskCell" customModule="ToDoList" customModuleProvider="target">
@@ -80,6 +80,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="4ss-zd-sLZ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="P1l-ah-D9j"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -88,7 +89,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LJB-wN-nZ2" secondAttribute="bottom" id="6Jt-5z-U0o"/>
                             <constraint firstAttribute="trailing" secondItem="LJB-wN-nZ2" secondAttribute="trailing" id="H4C-oF-q9l"/>
                             <constraint firstItem="LJB-wN-nZ2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qt6-5K-qmZ"/>
-                            <constraint firstItem="LJB-wN-nZ2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="teJ-t9-ahe"/>
+                            <constraint firstItem="LJB-wN-nZ2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="V4s-NY-Uaa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Sno-X2-6r1">

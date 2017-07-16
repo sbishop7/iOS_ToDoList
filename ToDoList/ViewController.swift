@@ -15,9 +15,6 @@ class ViewController: UIViewController {
     
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-//    let todoTask = NSEntityDescription.insertNewObject(forEntityName: "Task", into: managedObjectContext) as! ToDoTask
-    
-    
     @IBAction func newTaskCreated(_ segue: UIStoryboardSegue) {
         
         let controller = segue.source as! AddTaskViewController
@@ -100,12 +97,13 @@ extension ViewController: UITableViewDataSource {
         return cell
     }
     
-    
 }
 
 extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print ("tapped on \(indexPath.row)")
+        
         
         let todoTask = self.tasks[indexPath.row]
         todoTask.completed = !todoTask.completed

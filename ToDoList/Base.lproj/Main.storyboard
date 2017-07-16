@@ -92,12 +92,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Sno-X2-6r1">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="pTE-1R-iRT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="pTE-1R-iRT">
                             <connections>
-                                <segue destination="OV4-Rd-1pR" kind="presentation" id="JLy-Fp-eDS"/>
+                                <segue destination="OV4-Rd-1pR" kind="presentation" identifier="newTodoTask" id="JLy-Fp-eDS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="LJB-wN-nZ2" id="hRy-nm-Sof"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -115,7 +118,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="todoTask" borderStyle="roundedRect" placeholder="Todo Task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="giU-aS-Mip">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Todo Task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="giU-aS-Mip">
                                 <rect key="frame" x="16" y="28" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="aUi-Kg-PpP"/>
@@ -124,10 +127,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tl5-Fw-m6p">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tl5-Fw-m6p">
                                 <rect key="frame" x="16" y="60" width="343" height="162"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -148,7 +150,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="AddItemButtonPressed:" destination="OV4-Rd-1pR" eventType="touchUpInside" id="Pij-kd-hHI"/>
+                                    <segue destination="qzV-4K-tyl" kind="unwind" unwindAction="newTaskCreated:" id="bvc-Zo-9gF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -157,7 +159,7 @@
                             <constraint firstItem="bWg-hl-nEE" firstAttribute="top" secondItem="Gp0-Lj-LnH" secondAttribute="bottom" id="2Fl-G9-gAx"/>
                             <constraint firstItem="bWg-hl-nEE" firstAttribute="trailing" secondItem="U0X-Td-jpn" secondAttribute="trailingMargin" id="6cv-Dt-Piu"/>
                             <constraint firstItem="Gp0-Lj-LnH" firstAttribute="trailing" secondItem="U0X-Td-jpn" secondAttribute="trailingMargin" id="BLh-4n-3Fk"/>
-                            <constraint firstItem="Gp0-Lj-LnH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tl5-Fw-m6p" secondAttribute="bottom" id="DQy-a8-cd0"/>
+                            <constraint firstItem="Gp0-Lj-LnH" firstAttribute="top" secondItem="tl5-Fw-m6p" secondAttribute="bottom" id="DQy-a8-cd0"/>
                             <constraint firstItem="Gp0-Lj-LnH" firstAttribute="leading" secondItem="U0X-Td-jpn" secondAttribute="leadingMargin" id="E6y-U6-Crp"/>
                             <constraint firstItem="tl5-Fw-m6p" firstAttribute="leading" secondItem="U0X-Td-jpn" secondAttribute="leadingMargin" id="Hlg-h6-y76"/>
                             <constraint firstItem="bWg-hl-nEE" firstAttribute="leading" secondItem="U0X-Td-jpn" secondAttribute="leadingMargin" id="K92-Oy-BB2"/>
@@ -176,6 +178,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4An-01-iJY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="qzV-4K-tyl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1892" y="135.38230884557723"/>
         </scene>

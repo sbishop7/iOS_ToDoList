@@ -17,10 +17,13 @@ class AddTaskViewController: UIViewController {
     @IBOutlet weak var datePickerLabel: UIDatePicker!
     
     
-    @IBAction func AddItemButtonPressed(_ sender: UIButton) {
-        
-    }
-    
+//    @IBAction func AddItemButtonPressed(_ sender: UIButton) {
+//        print ("Title: \(String(describing: todoTaskLabel.text))")
+//    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        
+//    }
     
     
     

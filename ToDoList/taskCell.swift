@@ -16,5 +16,8 @@ class TaskCell: UITableViewCell {
     @IBOutlet weak var notesLabel: UILabel!
     
     
-    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
 }
